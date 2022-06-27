@@ -1,0 +1,49 @@
+<div class="custom_center_wrapper">
+  <form
+    nz-form
+    [formGroup]="validateForm"
+    class="custom_form_wrapper"
+    (ngSubmit)="submitForm()"
+  >
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your username!">
+        <nz-input-group nzPrefixIcon="mail">
+          <input
+            class="input_style"
+            type="text"
+            nz-input
+            formControlName="userName"
+            placeholder="Username"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Password!">
+        <nz-input-group nzPrefixIcon="lock" [nzSuffix]="suffixTemplate">
+          <input
+            class="input_style"
+            [type]="passwordVisible ? 'text' : 'password'"
+            type="password"
+            nz-input
+            formControlName="password"
+            placeholder="Password"
+          />
+        </nz-input-group>
+      </nz-form-control>
+      <ng-template #suffixTemplate>
+        <i
+          nz-icon
+          [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+          (click)="passwordVisible = !passwordVisible"
+        ></i>
+      </ng-template>
+    </nz-form-item>
+    <div nz-row>
+      <div nz-col>
+        <a class="login-form-forgot">Forgot password</a>
+      </div>
+    </div>
+    <button nz-button class="log_btn" [nzType]="'primary'">Login</button>
+  </form>
+</div>

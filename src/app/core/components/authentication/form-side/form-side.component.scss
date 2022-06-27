@@ -1,0 +1,21 @@
+.base-container {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.container {
+    @extend .base-container;
+    height: 100%;
+}
+
+.form-login {
+    background-color: beige;
+    height: 350px;
+}
+
+.welcome_warpper{
+    margin: auto;
+    height: 150px;
+}
