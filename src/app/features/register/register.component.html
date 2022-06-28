@@ -1,0 +1,77 @@
+<form
+  nz-form
+  [formGroup]="validateForm"
+  class="login"
+  (ngSubmit)="submitForm()"
+>
+  <div class="login__field">
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your username!">
+        <nz-input-group nzPrefixIcon="mail" class="login__input">
+          <input
+            type="text"
+            nz-input
+            formControlName="userName"
+            placeholder="Username"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+  </div>
+  <div class="login__field">
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your username!">
+        <nz-input-group nzPrefixIcon="mail" class="login__input">
+          <input
+            type="text"
+            nz-input
+            formControlName="userName"
+            placeholder="Username"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+  </div>
+  <div class="login__field">
+    
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group
+            nzPrefixIcon="lock"
+            class="login__input"
+            [nzSuffix]="suffixTemplate"
+          >
+            <input
+              [type]="passwordVisible ? 'text' : 'password'"
+              type="password"
+              nz-input
+              formControlName="password"
+              placeholder="Password"
+            />
+          </nz-input-group>
+        </nz-form-control>
+        <ng-template #suffixTemplate>
+          <i
+            nz-icon
+            [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+            (click)="passwordVisible = !passwordVisible"
+          ></i>
+        </ng-template>
+      </nz-form-item>
+  </div>
+  <div nz-row>
+    <div nz-col>
+      <a class="login-form-forgot">Forgot password</a>
+    </div>
+  </div>
+  <button nz-button class="button login__submit" [nzType]="'primary'">
+    Login
+  </button>
+</form>
+<div class="social-login">
+  <h3 class="h3__link">
+    Have no account?
+    <br />
+    <a href="" class="a__link">Sign Up</a>
+  </h3>
+</div>
