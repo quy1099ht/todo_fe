@@ -1,9 +1,9 @@
 <div class="container">
   <div class="inside__container">
     <div class="screen">
-      <div class="screen__content">
-        <app-login-feature></app-login-feature>
-
+      <div [ngSwitch]="url" class="screen__content">
+        <app-login-feature *ngSwitchCase="'/login'"></app-login-feature>
+        <app-register *ngSwitchCase="'/register'"></app-register>
         <div class="screen__background">
           <span class="screen__background__shape screen__background__shape4">
           </span>

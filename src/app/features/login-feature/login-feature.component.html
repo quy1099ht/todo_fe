@@ -11,6 +11,7 @@
           <input
             type="text"
             nz-input
+            class="input__sl"
             formControlName="userName"
             placeholder="Username"
           />
@@ -30,6 +31,7 @@
             [type]="passwordVisible ? 'text' : 'password'"
             type="password"
             nz-input
+            class="input__sl"
             formControlName="password"
             placeholder="Password"
           />
@@ -57,6 +59,6 @@
   <h3 class="h3__link">
     Have no account?
     <br />
-    <a href="" class="a__link">Sign Up</a>
+    <a routerLink="/register" class="a__link">Sign Up</a>
   </h3>
 </div>

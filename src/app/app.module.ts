@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { FormSideComponent } from './core/components/authentication/form-side/form-side.component';
 import { LogoSideComponent } from './core/components/authentication/logo-side/logo-side.component';
 import { LoginComponent } from './core/pages/login/login.component';
-import { RegisterComponent } from './core/pages/register/register.component';
 
 import en from '@angular/common/locales/en';
 
@@ -18,6 +17,8 @@ import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { LoginFeatureComponent } from './features/login-feature/login-feature.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './features/register/register.component';
 
 registerLocaleData(en);
 
@@ -34,10 +35,16 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
     FormSideComponent,
     LogoSideComponent,
     LoginComponent,
-    RegisterComponent,
     LoginFeatureComponent,
+    RegisterComponent,
   ],
-  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, AntDModule],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    AntDModule,
+    BrowserAnimationsModule,
+  ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
     { provide: NZ_ICONS, useValue: icons },
