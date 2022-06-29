@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormSideComponent } from './core/components/authentication/form-side/form-side.component';
 import { LogoSideComponent } from './core/components/authentication/logo-side/logo-side.component';
-import { LoginComponent } from './core/pages/login/login.component';
+import { AuthenticationBackGroundComponent } from './core/pages/authentication-pages/authentication-bg.component';
 
 import en from '@angular/common/locales/en';
 
@@ -34,7 +34,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
     AppComponent,
     FormSideComponent,
     LogoSideComponent,
-    LoginComponent,
+    AuthenticationBackGroundComponent,
     LoginFeatureComponent,
     RegisterComponent,
   ],
