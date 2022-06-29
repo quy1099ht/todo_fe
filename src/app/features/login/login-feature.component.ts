@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login-feature',
@@ -19,9 +20,10 @@ export class LoginFeatureComponent implements OnInit {
     }
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private title : Title) {}
 
   ngOnInit(): void {
+    this.title.setTitle("Sign in")
     this.validateForm = this.fb.group({
       email: [null, [Validators.required]],
       password: [null, [Validators.required]],

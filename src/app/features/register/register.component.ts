@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-register',
@@ -40,9 +41,10 @@ export class RegisterComponent implements OnInit {
     
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private title : Title) {}
 
   ngOnInit(): void {
+    this.title.setTitle("Sign up")
     this.validateForm = this.fb.group({
       email: [null, [Validators.required,this.emailValidator]],
       username: [null, [Validators.required]],
