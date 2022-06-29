@@ -4,6 +4,7 @@
   class="login"
   (ngSubmit)="submitForm()"
 >
+  <h1 class="a__link">Sign up</h1>
   <div class="login__field">
     <nz-form-item>
       <nz-form-control [nzErrorTip]="errorMail">
@@ -19,9 +20,11 @@
         </nz-input-group>
       </nz-form-control>
       <ng-template #errorMail let-control>
-        <ng-container *ngIf="control.hasError('required')">Please enter your email!</ng-container>
+        <ng-container *ngIf="control.hasError('required')"
+          >Please enter your email!</ng-container
+        >
         <ng-container *ngIf="control.hasError('invalid')">
-            Invalid Email Format!
+          Invalid Email Format!
         </ng-container>
       </ng-template>
     </nz-form-item>
@@ -60,9 +63,12 @@
         </nz-input-group>
       </nz-form-control>
       <ng-template #errorPass let-control>
-        <ng-container *ngIf="control.hasError('required')">Please enter your password!</ng-container>
+        <ng-container *ngIf="control.hasError('required')"
+          >Please enter your password!</ng-container
+        >
         <ng-container *ngIf="control.hasError('pattern')">
-          Your password need to have at least 1 uppercase, 1 lowercase, 1 number, 1 special character and no emoji!
+          Your password need to have at least 1 uppercase, 1 lowercase, 1
+          number, 1 special character and no emoji!
         </ng-container>
       </ng-template>
       <ng-template #suffixTemplate>
@@ -89,12 +95,13 @@
             nz-input
             formControlName="confirmPassword"
             placeholder="Confirm Password"
-            
           />
         </nz-input-group>
       </nz-form-control>
       <ng-template #errorTpl let-control>
-        <ng-container *ngIf="control.hasError('required')">Please confirm your password!</ng-container>
+        <ng-container *ngIf="control.hasError('required')"
+          >Please confirm your password!</ng-container
+        >
         <ng-container *ngIf="control.hasError('confirm')">
           Two passwords that you enter is inconsistent!
         </ng-container>
@@ -110,11 +117,13 @@
   </div>
   <div nz-row>
     <div nz-col>
-      <h3 class="font__color">Have an account?&nbsp; <a routerLink="/authentication/login" class="a__link">Login</a></h3>
+      <h3 class="font__color">
+        Have an account?&nbsp;
+        <a routerLink="/authentication/login" class="a__link">Login</a>
+      </h3>
     </div>
   </div>
   <button nz-button class="button login__submit" [nzType]="'primary'">
-    Register
+    Sign up
   </button>
 </form>
-
