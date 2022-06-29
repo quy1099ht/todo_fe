@@ -3,10 +3,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './authentication-bg.component.html',
-  styleUrls: ['./authentication-bg.component.scss'],
+  templateUrl: './authentication-pages.component.html',
+  styleUrls: ['./authentication-pages.component.scss'],
 })
-export class AuthenticationBackGroundComponent implements OnInit {
+export class AuthenticationPagesComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {

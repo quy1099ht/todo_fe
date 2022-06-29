@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormSideComponent } from './core/components/authentication/form-side/form-side.component';
 import { LogoSideComponent } from './core/components/authentication/logo-side/logo-side.component';
-import { AuthenticationBackGroundComponent } from './core/pages/authentication-pages/authentication-bg.component';
+import { AuthenticationPagesComponent } from './core/pages/authentication-pages/authentication-pages.component';
 
 import en from '@angular/common/locales/en';
 
@@ -15,7 +15,7 @@ import { NZ_ICONS } from 'ng-zorro-antd/icon';
 import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
 import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
-import { LoginFeatureComponent } from './features/login-feature/login-feature.component';
+import { LoginFeatureComponent } from './features/login/login-feature.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './features/register/register.component';
@@ -34,7 +34,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
     AppComponent,
     FormSideComponent,
     LogoSideComponent,
-    AuthenticationBackGroundComponent,
+    AuthenticationPagesComponent,
     LoginFeatureComponent,
     RegisterComponent,
   ],

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthenticationBackGroundComponent } from './authentication-bg.component';
+import { AuthenticationPagesComponent } from './authentication-pages.component';
 
 describe('LoginComponent', () => {
-  let component: AuthenticationBackGroundComponent;
-  let fixture: ComponentFixture<AuthenticationBackGroundComponent>;
+  let component: AuthenticationPagesComponent;
+  let fixture: ComponentFixture<AuthenticationPagesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuthenticationBackGroundComponent ]
+      declarations: [ AuthenticationPagesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AuthenticationBackGroundComponent);
+    fixture = TestBed.createComponent(AuthenticationPagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
