@@ -11,7 +11,9 @@ export class AuthenticationPagesComponent implements OnInit {
 
   ngOnInit(): void {
     //will check if logged in later
+    
 
+    //redirect to login
     this.router.url === '/authentication'
       ? this.router.navigate(['/authentication/login'])
       : console.log('Nothing happend');

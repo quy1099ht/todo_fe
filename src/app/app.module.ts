@@ -19,6 +19,7 @@ import { LoginFeatureComponent } from './features/login/login-feature.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './features/register/register.component';
+import { ForgotPasswordComponent } from './features/forgot-password/forgot-password.component';
 
 registerLocaleData(en);
 
@@ -37,6 +38,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
     AuthenticationPagesComponent,
     LoginFeatureComponent,
     RegisterComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,

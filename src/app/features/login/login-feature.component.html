@@ -6,14 +6,14 @@
 >
   <div class="login__field">
     <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your username!">
+      <nz-form-control nzErrorTip="Please enter your email!">
         <nz-input-group nzPrefixIcon="mail" class="login__input">
           <input
             type="text"
             nz-input
             class="input__sl"
-            formControlName="userName"
-            placeholder="Username"
+            formControlName="email"
+            placeholder="Email"
           />
         </nz-input-group>
       </nz-form-control>
@@ -21,7 +21,7 @@
   </div>
   <!-- <div class="login__field"> -->
     <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your Password!">
+      <nz-form-control nzErrorTip="Please enter your Password!">
         <nz-input-group
           nzPrefixIcon="lock"
           class="login__input"
@@ -49,7 +49,7 @@
   <br>
   <div nz-row>
     <div nz-col>
-      <a class="a__link">Forgot password</a>
+      <a routerLink="/authentication/forgot-password" class="a__link">Forgot password</a>
     </div>
   </div>
   <button nz-button class="button login__submit" [nzType]="'primary'">

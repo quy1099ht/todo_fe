@@ -27,13 +27,17 @@ export class RegisterComponent implements OnInit {
   regex: RegExp = new RegExp('^[0-9]+$');
 
   submitForm(): void {
+    
     if (this.validateForm.valid) {
       return console.log('submit', this.validateForm.value);
     }
     // for (const key in this.validateForm.value) {
     //   console.log(key,this.validateForm.value[key]);
     // }
-    Object.values(this.validateForm.controls).forEach((control) => {});
+    Object.values(this.validateForm.controls).forEach((control) => {
+      control.markAsDirty();      
+    });
+    
   }
 
   constructor(private fb: FormBuilder) {}
@@ -43,11 +47,9 @@ export class RegisterComponent implements OnInit {
       email: [null, [Validators.required,this.emailValidator]],
       username: [null, [Validators.required]],
       password: [null, [Validators.required,this.passwordValidator]],
-      confirmPassword: [
-        null,
-        [Validators.required, this.confirmationValidator],
-      ],
+      confirmPassword: [null, [Validators.required,this.confirmationValidator]],
     });
+    
   }
 
   emailValidator = (control: FormControl): { [s: string]: boolean } => {
