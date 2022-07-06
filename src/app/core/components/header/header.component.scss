@@ -1,0 +1,33 @@
+.header__container {
+    display: flex;
+    height: 100%;
+
+    * {
+        height: 100%;
+    }
+
+    i {
+        font-size: x-large;
+        
+    }
+
+    h3 {
+        color: #a7a5e6;
+    }
+
+    div {
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {}
+
+    .main {
+        text-align: center;
+    }
+
+    .user {
+        text-align: right;
+    }
+}

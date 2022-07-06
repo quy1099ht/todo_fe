@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationPagesComponent } from './core/pages/authentication-pages/authentication-pages.component';
+import { HomePageComponent } from './core/pages/home-page/home-page.component';
 import { ForgotPasswordComponent } from './features/forgot-password/forgot-password.component';
 import { LoginFeatureComponent } from './features/login/login-feature.component';
 import { RegisterComponent } from './features/register/register.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/authentication/login', pathMatch: 'full' },
+  { path: '' ,component: HomePageComponent },
   {
     path: 'authentication',
     component: AuthenticationPagesComponent,
@@ -31,4 +32,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
