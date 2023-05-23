@@ -14,6 +14,6 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run tests
-      run: npm run test:headless
+      run: ng test --browsers ChromeHeadless
     - name: Build
       run: npm run build:prod
