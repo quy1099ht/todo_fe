@@ -12,8 +12,8 @@ jobs:
     - name: Setting up Nodes
       uses: actions/setup-node@v3
     - name: Install dependencies
-      run: npm install
+      run: CI=true npm install
     - name: Run tests
       run: CI=true npm test
     - name: Build
-      run: npm run build:prod
+      run: CI=true npm run build:prod
